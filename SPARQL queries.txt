@@ -1,0 +1,88 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX relationship: <http://example.org/mechanicalEngineering#>
+
+1.List all subclasses of mechanical engineering
+
+SELECT ?subclass ?label ?comment
+WHERE {
+  ?subclass rdf:type owl:Class.
+  ?subclass rdfs:subClassOf <http://www.linkeddatatools.com#mechanicalEngineering>.
+  OPTIONAL { ?subclass rdfs:label ?label. }
+  OPTIONAL { ?subclass rdfs:comment ?comment. }
+}
+
+2.Retrieve the label and comment for "Engineering Design."
+
+SELECT ?label ?comment
+WHERE {
+  <http://www.linkeddatatools.com/mechanicalEngineering#engineeringDesign> rdfs:label ?label.
+  <http://www.linkeddatatools.com/mechanicalEngineering#engineeringDesign> rdfs:comment ?comment.
+}
+
+3.Find all instances of "Parameters."
+
+SELECT ?instance ?label ?comment
+WHERE {
+  ?instance rdf:type <http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign#Parameters>.
+  OPTIONAL { ?instance rdfs:label ?label. }
+  OPTIONAL { ?instance rdfs:comment ?comment. }
+}
+
+4.Retrieve information about "Quality Control" and its subclasses.
+
+SELECT ?class ?label ?comment
+WHERE {
+  ?class rdf:type owl:Class.
+  ?class rdfs:subClassOf <http://www.linkeddatatools.com/mechanicalEngineering#qualityControl>.
+  OPTIONAL { ?class rdfs:label ?label. }
+  OPTIONAL { ?class rdfs:comment ?comment. }
+}
+
+5.List all instances of "Research" and their labels.
+
+SELECT ?instance ?label
+WHERE {
+  ?instance rdf:type <http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch/research#Projects>.
+  OPTIONAL { ?instance rdfs:label ?label. }
+}
+
+6.Retrieve the labels of all instances under "Data Integration."
+
+SELECT ?instance ?label
+WHERE {
+  ?instance rdf:type <http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery/dataIntegration#dataModels>.
+  OPTIONAL { ?instance rdfs:label ?label. }
+}
+
+7.List all instances of "Compliance" and their comments.
+
+SELECT ?instance ?comment
+WHERE {
+  ?instance rdf:type <http://www.linkeddatatools.com/mechanicalEngineering/qualityControl/compliance#industrialRules>.
+  OPTIONAL { ?instance rdfs:comment ?comment. }
+}
+
+8.Objects with the property enhance
+
+SELECT ?enhance
+WHERE {
+  <http://www.linkeddatatools.com/mechanicalEngineering#educationTraining> relationship:enhance ?enhance.
+}
+
+9.Objects with property consists
+
+SELECT ?consists
+WHERE {
+  <http://www.linkeddatatools.com/mechanicalEngineering#engineeringDesign> relationship:consists ?consists.
+}
+
+10.Objects with property comply
+
+SELECT ?comply
+WHERE {
+  <http://www.linkeddatatools.com/mechanicalEngineering#engineeringDesign> relationship:comply ?comply.
+}
+
+
