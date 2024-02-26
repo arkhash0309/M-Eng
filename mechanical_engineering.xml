@@ -1,0 +1,498 @@
+<rdf:RDF 
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+xmlns:owl="http://www.w3.org/2002/07/owl#" 
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:relationship="http://example.org/mechanicalEngineering#">
+
+<!-- OWL Header --> 
+<owl:Ontology rdf:about="http://www.linkeddatatools.com#mechanicalEngineering"> 
+    <dc:title>Mechanical Engineering Ontology</dc:title> 
+    <dc:description>An ontology on Mechanical Engineering</dc:description> 
+</owl:Ontology>
+
+<!--OWL Class definition- Thing-->
+<owl:Class rdf:about="http://www.linkeddatatools.com#thing">
+  <rdfs:label>The Thing</rdfs:label> 
+  <rdfs:comment>The superdefining object of mechanical engineering.</rdfs:comment>
+</owl:Class>
+
+
+<!--OWL Sub class definition- Mechanical Engineering-->
+<owl:Class rdf:about="http://www.linkeddatatools.com#mechanicalEngineering"></owl:Class>
+
+<!--Mechanical Engineering is a sub class of Thing-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com#mechanicalEngineering">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com#thing"/>
+    <rdfs:label>Mechanical Engineering</rdfs:label>
+    <rdfs:comment>Involves all mechanical systems in the ontology.</rdfs:comment>
+</rdf:Description>
+
+
+<!--Defining the sub classes under mechanical engineering-->
+<!--OWL Sub class definition- Engineering Design-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering#engineeringDesign"></owl:Class>
+
+<!--Engineering Design is a sub class of Mechanical Engineering-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering#engineeringDesign">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com#mechanicalEngineering"/>
+    <rdfs:label>Engineering Design</rdfs:label>
+    <rdfs:comment>Overviews design and standard of mechanical systems.</rdfs:comment>
+</rdf:Description>
+
+
+<!--OWL Sub class definition- Knowledge Discovery-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering#knowledgeDiscovery"></owl:Class>
+
+<!--Knowledge Discovery is a sub class of Mechanical Engineering-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering#knowledgeDiscovery">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com#mechanicalEngineering"/>
+    <rdfs:label>Knowledge Discovery</rdfs:label>
+    <rdfs:comment>Discusses the innovations knowledge discovery of the ontology.</rdfs:comment>
+</rdf:Description>
+
+
+<!--OWL Sub class definition- Quality Control-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering#qualityControl"></owl:Class>
+
+<!--Quality Control is a sub class of Mechanical Engineering-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering#qualityControl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com#mechanicalEngineering"/>
+    <rdfs:label>Quality Control</rdfs:label>
+    <rdfs:comment>Ensures the control of quality in mechanical systems.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Education and Training-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering#educationTraining"></owl:Class>
+
+<!--Education and Training is a sub class of Mechanical Engineering-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering#educationTraining">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com#mechanicalEngineering"/>
+    <rdfs:label>Education and Training</rdfs:label>
+    <rdfs:comment>Enables the sharing of knowledge amongst users.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Innovation and Research-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering#innovationResearch"></owl:Class>
+
+<!--Innovation and Research is a sub class of Mechanical Engineering-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering#innovationResearch">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com#mechanicalEngineering"/>
+    <rdfs:label>Innovation and Research</rdfs:label>
+    <rdfs:comment>Encouraging research on the topic.</rdfs:comment>
+</rdf:Description>
+
+
+<!--Defining the sub classes under engineering design-->
+<!--OWL Sub class definition- Parameters-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign#Parameters"></owl:Class>
+
+<!--Parameters is a sub class of Engineering Design-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign#Parameters">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering#engineeringDesign"/>
+    <rdfs:label>Parameters</rdfs:label>
+    <rdfs:comment>Parameters for mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Simulations-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign#Simulations"></owl:Class>
+
+<!--Simulations is a sub class of Engineering Design-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign#Simulations">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering#engineeringDesign"/>
+    <rdfs:label>Simulations</rdfs:label>
+    <rdfs:comment>Simulations relevant to mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Standards-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign#Standards"></owl:Class>
+
+<!--Standards is a sub class of Engineering Design-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign#Standards">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering#engineeringDesign"/>
+    <rdfs:label>Standards</rdfs:label>
+    <rdfs:comment>Standards to be maintained in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+
+<!--Defining the subclasses under knowledge discovery-->
+<!--OWL Sub class definition- Semantic Search-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery#semanticSearch"></owl:Class>
+
+<!--Semantic Search is a sub class of Knowledge Discovery-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery#semanticSearch">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering#knowledgeDiscovery"/>
+    <rdfs:label>Semantic Search</rdfs:label>
+    <rdfs:comment>Search in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Data Integration-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery#dataIntegration"></owl:Class>
+
+<!--Data Integration is a sub class of Knowledge Discovery-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery#dataIntegration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering#knowledgeDiscovery"/>
+    <rdfs:label>Data Integration</rdfs:label>
+    <rdfs:comment>Data integration in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+
+<!--Defining the subclasses under Quality Control-->
+<!--OWL Sub class definition- Compliance-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl#compliance"></owl:Class>
+
+<!--Compliance is a sub class of Quality Control-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl#compliance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering#qualityControl"/>
+    <rdfs:label>Compliance</rdfs:label>
+    <rdfs:comment>Compliance in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Quality Measurement-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl#qualityMeasurement"></owl:Class>
+
+<!--Quality Measurement is a sub class of Quality Control-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl#qualityMeasurement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering#qualityControl"/>
+    <rdfs:label>Quality Measurement</rdfs:label>
+    <rdfs:comment>Quality Measurement in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+
+<!--Defining the sub classes under Education and Training-->
+<!--OWL Sub class definition- Resources for training-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining#trainingResources"></owl:Class>
+
+<!--Resources for training is a sub class of Education and Training-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining#trainingResources">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering#educationTraining"/>
+    <rdfs:label>Resources for training</rdfs:label>
+    <rdfs:comment>Training resources in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Best Practices-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining#bestPractices"></owl:Class>
+
+<!--Best Practices is a sub class of Education and Training-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining#bestPractices">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering#educationTraining"/>
+    <rdfs:label>Best Practices</rdfs:label>
+    <rdfs:comment>Best Practices in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+
+<!--Defining the subclasses under Innovation and Research-->
+<!--OWL Sub class definition- Research-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch#research"></owl:Class>
+
+<!--Research is a sub class of Innovation and Research-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch#research">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering#innovationResearch"/>
+    <rdfs:label>Research</rdfs:label>
+    <rdfs:comment>Research in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Sharing Knowledge-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch#sharingKnowledge"></owl:Class>
+
+<!--Sharing Knowledge is a sub class of Innovation and Research-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch#sharingKnowledge">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering#innovationResearch"/>
+    <rdfs:label>Sharing Knowledge</rdfs:label>
+    <rdfs:comment>Sharing knowledge in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+
+
+<!--Defining the sub classes under Parameters-->
+<!--OWL Sub class definition- Geometric Dimensions-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign/Parameters#geometricDimensions"></owl:Class>
+
+<!--Geometric Dimensions is a sub class of Parameters-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign/Parameters#geometricDimensions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign#Parameters"/>
+    <rdfs:label>Geometric Dimensions</rdfs:label>
+    <rdfs:comment>Geometric Dimensions in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Environmental Conditions-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign/Parameters#environmentalConditions"></owl:Class>
+
+<!--Environmental Conditions is a sub class of Parameters-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign/Parameters#environmentalConditions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign#Parameters"/>
+    <rdfs:label>Environmental Conditions</rdfs:label>
+    <rdfs:comment>Environmental Conditions in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--Defining the subclasses under Simulations-->
+<!--OWL Sub class definition- Simulation models-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign/Simulations#simulationModels"></owl:Class>
+
+<!--Simulation models is a sub class of Simulations-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign/Simulations#simulationModels">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign#Simulations"/>
+    <rdfs:label>Simulation Models</rdfs:label>
+    <rdfs:comment>Simulation models in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Performance Measurement-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign/Simulations#performanceMeasurement"></owl:Class>
+
+<!--Performance Measurement is a sub class of Simulations-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign/Simulations#performanceMeasurement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign#Simulations"/>
+    <rdfs:label>Performance Measurement</rdfs:label>
+    <rdfs:comment>Performance Measurement in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--Defining the subclasses under semantic search-->
+<!--OWL Sub class definition- Algorithms-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery/semanticSearch#Algorithms"></owl:Class>
+
+<!--Algorithms is a sub class of Semantic Search-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery/semanticSearch#Algorithms">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery#semanticSearch"/>
+    <rdfs:label>Algorithms</rdfs:label>
+    <rdfs:comment>Algorithms in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Annotations-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery/semanticSearch#Annotations"></owl:Class>
+
+<!--Annotations is a sub class of Semantic Search-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery/semanticSearch#Annotations">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery#semanticSearch"/>
+    <rdfs:label>Annotations</rdfs:label>
+    <rdfs:comment>Annotations in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+
+<!--Defining the subclasses under data integration-->
+<!--OWL Sub class definition- Data Models-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery/dataIntegration#dataModels"></owl:Class>
+
+<!--Data Models is a sub class of Data integration-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery/dataIntegration#dataModels">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery#dataIntegration"/>
+    <rdfs:label>Data Models</rdfs:label>
+    <rdfs:comment>Data models in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- API-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery/dataIntegration#API"></owl:Class>
+
+<!--API is a sub class of Data integration-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery/dataIntegration#API">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery#dataIntegration"/>
+    <rdfs:label>API</rdfs:label>
+    <rdfs:comment>APIs in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+
+<!--Defining the subclasses under Compliance-->
+<!--OWL Sub class definition- Industrial Rules-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl/compliance#industrialRules"></owl:Class>
+
+<!--Industrial Rules is a sub class of Compliance-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl/compliance#industrialRules">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl#compliance"/>
+    <rdfs:label>Industrial Rules</rdfs:label>
+    <rdfs:comment>Industrial rules in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Approvals by authorities-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl/compliance#authorityApprovals"></owl:Class>
+
+<!--Approvals by authorities is a sub class of Compliance-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl/compliance#authorityApprovals">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl#compliance"/>
+    <rdfs:label>Approvals by authorities</rdfs:label>
+    <rdfs:comment>Authority approvals in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+
+<!--Defining the subclasses under quality measurement-->
+<!--OWL Sub class definition- Rate of fail productions-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl/qualityMeasurement#failRate"></owl:Class>
+
+<!--Rate of fail productions is a sub class of Quality Measurement-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl/qualityMeasurement#failRate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl#qualityMeasurement"/>
+    <rdfs:label>Rate of fail productions</rdfs:label>
+    <rdfs:comment>Fail rate in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Reliability Rate-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl/qualityMeasurement#reliabilityRate"></owl:Class>
+
+<!--Reliability Rate is a sub class of Quality Measurement-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl/qualityMeasurement#reliabilityRate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/qualityControl#qualityMeasurement"/>
+    <rdfs:label>Reliability Rate</rdfs:label>
+    <rdfs:comment>Reliability rate in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+
+<!--Defining the subclasses under resources for training-->
+<!--OWL Sub class definition- Textbooks-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining/trainingResources#Textbooks"></owl:Class>
+
+<!--Textbooks is a sub class of Resources for training-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining/trainingResources#Textbooks">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining#trainingResources"/>
+    <rdfs:label>Textbooks</rdfs:label>
+    <rdfs:comment>Textbooks in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Latest Simulators-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining/trainingResources#latestSimulators"></owl:Class>
+
+<!--Latest Simulators is a sub class of Resources for training-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining/trainingResources#latestSimulators">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining#trainingResources"/>
+    <rdfs:label>Latest Simulators</rdfs:label>
+    <rdfs:comment>Latest simulators in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+
+<!--Defining the subclasses under Best Practices-->
+<!--OWL Sub class definition- Conference Papers-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining/bestPractices#conferencePapers"></owl:Class>
+
+<!--Conference Papers is a sub class of Best Practices-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining/bestPractices#conferencePapers">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining#bestPractices"/>
+    <rdfs:label>Conference Papers</rdfs:label>
+    <rdfs:comment>Conference papers in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Case Studies-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining/bestPractices#caseStudies"></owl:Class>
+
+<!--Case Studies is a sub class of Best Pratices-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining/bestPractices#caseStudies">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining#bestPractices"/>
+    <rdfs:label>Case Studies</rdfs:label>
+    <rdfs:comment>Case studies in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+
+<!--Defining the subclasses under Research-->
+<!--OWL Sub class definition- Projects-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch/research#Projects"></owl:Class>
+
+<!--Projects is a sub class of Research-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch/research#Projects">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch/research"/>
+    <rdfs:label>Projects</rdfs:label>
+    <rdfs:comment>Projects in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Cooperative Projects-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch/research#cooperativeProjects"></owl:Class>
+
+<!--Cooperative Projects is a sub class of Research-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch/research#cooperativeProjects">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch/research"/>
+    <rdfs:label>Cooperative Projects</rdfs:label>
+    <rdfs:comment>Cooperative projects in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+
+<!--Defining subclasses under sharing knowledge-->
+<!--OWL Sub class definition- Journals-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch/sharingKnowledge#Journals"></owl:Class>
+
+<!--Journals is a sub class of Sharing Knowledge-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch/sharingKnowledge#Journals">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch#sharingKnowledge"/>
+    <rdfs:label>Journals</rdfs:label>
+    <rdfs:comment>Journals in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Conferences-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch/sharingKnowledge#Conferences"></owl:Class>
+
+<!--Conferences is a sub class of Sharing Knowledge-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch/sharingKnowledge#Conferences">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch#sharingKnowledge"/>
+    <rdfs:label>Conferences</rdfs:label>
+    <rdfs:comment>Conferences in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+<!--OWL Sub class definition- Collaboration Platforms-->
+<owl:Class rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch/sharingKnowledge#collaborationPlatforms"></owl:Class>
+
+<!--Collaboration Platforms is a sub class of Sharing Knowledge-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch/sharingKnowledge#collaborationPlatforms">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/innovationResearch#sharingKnowledge"/>
+    <rdfs:label>Collaboration Platforms</rdfs:label>
+    <rdfs:comment>Collaboration platforms in mechanical engineering.</rdfs:comment>
+</rdf:Description>
+
+
+
+<!-- consists property-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering#engineeringDesign">
+    <relationship:consists rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign#Parameters"/>
+    <relationship:consists rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign#Simulations"/>
+</rdf:Description>
+
+<!-- comply property-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering#engineeringDesign">
+    <relationship:comply rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/engineeringDesign#Standards"/>
+</rdf:Description>
+
+<!-- facilitate property-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering#knowledgeDiscovery">
+    <relationship:facilitate rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery#semanticSearch"/>
+    <relationship:facilitate rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/knowledgeDiscovery#dataIntegration"/>
+</rdf:Description>
+
+<!-- enhance property-->
+<rdf:Description rdf:about="http://www.linkeddatatools.com/mechanicalEngineering#educationTraining">
+    <relationship:enhance rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining#trainingResources"/>
+    <relationship:enhance rdf:resource="http://www.linkeddatatools.com/mechanicalEngineering/educationTraining#bestPractices"/>
+</rdf:Description>
+
+</rdf:RDF>
+
